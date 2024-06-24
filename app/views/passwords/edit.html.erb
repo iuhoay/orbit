@@ -1,29 +1,30 @@
-<h1>Change your password</h1>
+<div class="card w-full max-w-sm mx-auto">
+  <div class="card-body gap-8">
+    <h1 class="text-4xl">Change your password</h1>
 
-<%= form_with model: current_user, url: password_path do |form| %>
-  <% if form.object.errors.any? %>
-    <% form.object.errors.full_messages.each do |message| %>
-      <div><%= message %></div>
+    <%= form_with model: current_user, url: password_path, class: "gap-2 flex flex-col" do |form| %>
+
+      <% if form.object.errors.any? %>
+        <% form.object.errors.full_messages.each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      <% end %>
+
+      <div>
+        <%= form.password_field :password_challenge, class: "input input-bordered w-full", placeholder: "Current Password" %>
+      </div>
+
+      <div>
+        <%= form.password_field :password, class: "input input-bordered w-full", placeholder: "New Password" %>
+      </div>
+
+      <div>
+        <%= form.password_field :password_confirmation, class: "input input-bordered w-full", placeholder: "New Password Confirmation" %>
+      </div>
+
+      <div>
+        <%= form.submit "Change Password", class: "btn btn-primary w-full" %>
+      </div>
     <% end %>
-  <% end %>
-
-  <div>
-    <%= form.label :password_challenge, "Current Password" %>
-    <%= form.password_field :password_challenge %>
   </div>
-
-  <div>
-    <%= form.label :password, "New Password" %>
-    <%= form.password_field :password %>
-  </div>
-
-  <div>
-    <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation %>
-  </div>
-
-  <div>
-    <%= form.submit "Change Password" %>
-  </div>
-
-<% end %>
+</div>

@@ -1,0 +1,17 @@
+<div class="toast toast-top toast-center">
+  <% if notice %>
+    <div class="alert alert-success" data-controller="toast">
+      <span><%= notice %></span>
+
+      <button data-action="click->toast#close" data-toast-target="countdown" class="btn btn-sm btn-ghost">Close</button>
+    </div>
+  <% end %>
+
+  <% if alert %>
+    <div role="alert" class="alert alert-error" data-controller="toast">
+      <span><%= alert %></span>
+
+      <button data-action="click->toast#close" data-toast-target="countdown" class="btn btn-sm btn-ghost">Close</button>
+    </div>
+  <% end %>
+</div>
