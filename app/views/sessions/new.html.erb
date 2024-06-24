@@ -1,21 +1,14 @@
-<div class="card w-full max-w-sm mx-auto">
+<div class="card w-full max-w-md mx-auto">
   <div class="card-body gap-8">
     <h1 class="text-4xl">Sign In</h1>
 
     <%= form_with url: session_path, class: "gap-2 flex flex-col" do |form| %>
 
-      <div>
-        <%= form.email_field :email, class: "input input-bordered w-full", placeholder: "Email" %>
-      </div>
+      <%= form.email_field :email, class: "input input-bordered w-full", placeholder: "Email" %>
 
-      <div>
-        <%= form.password_field :password, class: "input input-bordered w-full", placeholder: "Password" %>
-      </div>
+      <%= form.password_field :password, class: "input input-bordered w-full", placeholder: "Password" %>
 
-      <div>
-        <%= form.submit "Sign In", class: "btn btn-primary w-full" %>
-      </div>
-
+      <%= form.submit "Sign In", class: "btn btn-primary w-full" %>
     <% end %>
 
     <div class="flex flex-col gap-2 text-right">

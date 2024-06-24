@@ -32,6 +32,8 @@ class PasswordResetsController < ApplicationController
   end
 
   def password_params
-    params.require(:user).permit(:password, :password_confirmation)
+    params.require(:user).permit(:password, :password_confirmation).tap do |user_params|
+      user_params[:password] = nil if user_params[:password].blank?
+    end
   end
 end
