@@ -1,23 +1,15 @@
-<h1>Reset Your Password</h1>
+<div class="card w-full max-w-md mx-auto">
+  <div class="card-body gap-8">
+    <h1 class="text-4xl">Reset Your Password</h1>
 
-<%= form_with model: @user, url: password_reset_path(token: params[:token]) do |form| %>
-  <% if form.object.errors.any? %>
-    <% form.object.errors.full_messages.each do |message| %>
-      <div><%= message %></div>
+    <%= form_with model: @user, url: password_reset_path(token: params[:token]), class: "gap-2 flex flex-col" do |form| %>
+      <%= form_errors_for(form) %>
+
+      <%= form.password_field :password, placeholder: "New Password", class: "input input-bordered w-full" %>
+
+      <%= form.password_field :password_confirmation, placeholder: "New Password Confirmation", class: "input input-bordered w-full" %>
+
+      <%= form.submit "Reset Password", class: "btn btn-primary w-full" %>
     <% end %>
-  <% end %>
-
-  <div>
-    <%= form.label :password %>
-    <%= form.password_field :password %>
   </div>
-
-  <div>
-    <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation %>
-  </div>
-
-  <div>
-    <%= form.submit "Reset Password" %>
-  </div>
-<% end %>
+</div>

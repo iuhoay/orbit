@@ -1,0 +1,7 @@
+<div class="alert alert-error">
+  <ul class="list-disc list-inside">
+    <% form.object.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
