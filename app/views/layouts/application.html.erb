@@ -13,12 +13,23 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
-    
+
     <%= stylesheet_link_tag :all, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <div><%= notice %></div>
+    <div><%= alert %></div>
+
+    <% if user_signed_in? %>
+      <%= link_to "Edit Password", edit_password_path %>
+      <%= button_to "Sign Out", session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Sign In", new_session_path %>
+      <%= link_to "Sign Up", new_registration_path %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
