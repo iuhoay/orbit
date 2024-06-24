@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 770b35389610bc15bc83d20a199566acb6a1c22a
+  revision: de4d8744744acab2dd9db0683ccf784ea45810b2
   branch: main
   specs:
     actioncable (8.0.0.alpha)
@@ -95,6 +95,12 @@ GIT
       thor (~> 1.0, >= 1.2.2)
       zeitwerk (~> 2.6)
 
+GIT
+  remote: https://github.com/ruby/net-pop.git
+  revision: e8d0afe2773b9eb6a23c39e9e437f6fc0fc7c733
+  specs:
+    net-pop (0.1.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -179,7 +185,6 @@ GEM
     net-imap (0.4.14)
       date
       net-protocol
-    net-pop (0.1.2)
     net-protocol (0.2.2)
       timeout
     net-scp (4.0.0)
@@ -347,6 +352,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   kamal
+  net-pop!
   propshaft
   puma (>= 5.0)
   rails!

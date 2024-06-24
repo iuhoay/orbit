@@ -58,3 +58,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "net-pop", github: "ruby/net-pop" # Fix for ruby 3.3.3
