@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   resource :password_reset
   resource :password
 
+  namespace :admin do
+    root "pages#index"
+  end
+
   # Defines the root path route ("/")
   root "pages#index"
 end
