@@ -10,3 +10,8 @@
 
 # Create a default admin user
 User.create_with(password: "password", role: :admin).find_or_create_by!(email: "admin@example.com")
+
+# Create 100 sample users
+100.times do |i|
+  User.create_with(password: "password").find_or_create_by!(email: "user_#{i}@example.com")
+end

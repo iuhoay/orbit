@@ -5,9 +5,9 @@
 
   <li>
     <%= nested_list(
-      { name: "Users", path: "/admin/users",
+      { name: "Users",
         children: [
-          { name: "List", path: admin_root_path },
+          { name: "List", path: admin_users_path },
         ]
       }
     ) %>

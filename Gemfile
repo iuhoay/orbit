@@ -62,3 +62,5 @@ end
 gem "net-pop", github: "ruby/net-pop" # Fix for ruby 3.3.3
 
 gem "cssbundling-rails", "~> 1.4"
+
+gem "kaminari"

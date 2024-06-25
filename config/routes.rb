@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   resource :password
 
   namespace :admin do
+    resources :users
+
     root "pages#index"
   end
 
