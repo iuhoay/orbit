@@ -27,4 +27,19 @@ class UserTest < ActiveSupport::TestCase
     user.valid?
     assert_equal "abc@example.org", user.email
   end
+
+  test "admin user" do
+    user = users(:admin)
+    assert user.admin?
+  end
+
+  test "non-admin user" do
+    user = users(:one)
+    assert_not user.admin?
+  end
+
+  test "default user is not admin" do
+    user = User.new
+    assert_not user.admin?
+  end
 end

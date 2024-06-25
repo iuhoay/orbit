@@ -1,0 +1,25 @@
+<% content_for :admin_panel, true %>
+<% content_for :title, "Home - Admin" %>
+<% content_for :nav_brand do %>
+  <label for="admin-drawer" class="btn btn-ghost drawer-button lg:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+  </label>
+  <%= link_to "Admin", admin_root_path, class: "btn btn-ghost text-xl" %>
+<% end %>
+
+<% content_for :content do %>
+  <div class="drawer lg:drawer-open">
+    <input id="admin-drawer" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content flex flex-col">
+      <%= yield %>
+    </div>
+    <div class="drawer-side">
+      <label for="admin-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+      <%= render "shared/admin_sidebar" %>
+    </div>
+  </div>
+<% end %>
+
+<%= render template: "layouts/application" %>
