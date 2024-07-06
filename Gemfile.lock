@@ -107,11 +107,13 @@ GEM
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     ast (2.4.2)
+    backport (1.2.0)
     base64 (0.2.0)
     bcrypt (3.1.20)
     bcrypt_pbkdf (1.1.1)
     bcrypt_pbkdf (1.1.1-arm64-darwin)
     bcrypt_pbkdf (1.1.1-x86_64-darwin)
+    benchmark (0.3.0)
     bigdecimal (3.1.8)
     bindex (0.8.1)
     bootsnap (1.18.3)
@@ -137,8 +139,10 @@ GEM
     debug (1.9.2)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    diff-lcs (1.5.1)
     dotenv (2.8.1)
     drb (2.2.1)
+    e2mmap (0.1.0)
     ed25519 (1.3.0)
     erubi (1.13.0)
     globalid (1.2.1)
@@ -153,6 +157,7 @@ GEM
     irb (1.13.2)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
+    jaro_winkler (1.6.0)
     jbuilder (2.12.0)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -181,6 +186,10 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
+    kramdown (2.4.0)
+      rexml
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
     language_server-protocol (3.17.0.3)
     logger (1.6.0)
     loofah (2.22.0)
@@ -253,11 +262,14 @@ GEM
       nokogiri (~> 1.14)
     rainbow (3.1.1)
     rake (13.2.1)
+    rbs (2.8.4)
     rdoc (6.7.0)
       psych (>= 4.0.0)
     regexp_parser (2.9.2)
     reline (0.5.9)
       io-console (~> 0.5)
+    reverse_markdown (2.1.1)
+      nokogiri
     rexml (3.3.0)
       strscan
     rubocop (1.64.1)
@@ -297,6 +309,22 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    solargraph (0.50.0)
+      backport (~> 1.2)
+      benchmark
+      bundler (~> 2.0)
+      diff-lcs (~> 1.4)
+      e2mmap
+      jaro_winkler (~> 1.5)
+      kramdown (~> 2.3)
+      kramdown-parser-gfm (~> 1.1)
+      parser (~> 3.0)
+      rbs (~> 2.0)
+      reverse_markdown (~> 2.0)
+      rubocop (~> 1.38)
+      thor (~> 1.0)
+      tilt (~> 2.0)
+      yard (~> 0.9, >= 0.9.24)
     sqlite3 (2.0.2-aarch64-linux-gnu)
     sqlite3 (2.0.2-aarch64-linux-musl)
     sqlite3 (2.0.2-arm-linux-gnu)
@@ -317,6 +345,7 @@ GEM
     stringio (3.1.1)
     strscan (3.1.0)
     thor (1.3.1)
+    tilt (2.4.0)
     timeout (0.4.1)
     turbo-rails (2.0.5)
       actionpack (>= 6.0.0)
@@ -339,6 +368,7 @@ GEM
     x25519 (1.0.10)
     xpath (3.2.0)
       nokogiri (~> 1.8)
+    yard (0.9.36)
     zeitwerk (2.6.16)
 
 PLATFORMS
@@ -374,6 +404,7 @@ DEPENDENCIES
   rails!
   rubocop-rails-omakase
   selenium-webdriver
+  solargraph
   sqlite3 (>= 1.4)
   stimulus-rails
   turbo-rails

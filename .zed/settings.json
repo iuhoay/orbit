@@ -1,0 +1,30 @@
+// Folder-specific settings
+//
+// For a full list of overridable settings, and general information on folder-specific settings,
+// see the documentation: https://zed.dev/docs/configuring-zed#folder-specific-settings
+{
+  "languages": {
+    "Ruby": {
+      "language_servers": ["solargraph", "tailwindcss-language-server"]
+    }
+  },
+  "lsp": {
+    "solargraph": {
+      "initialization_options": {
+        "diagnostics": true,
+        "formatting": true
+      }
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "erb": "html",
+          "ruby": "html"
+        },
+        "experimental": {
+          "classRegex": ["\\bclass:\\s*['\"]([^'\"]*)['\"]"]
+        }
+      }
+    }
+  }
+}
