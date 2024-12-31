@@ -52,6 +52,8 @@ group :development do
   gem "web-console"
 
   gem "solargraph", require: false
+
+  gem "hotwire-spark"
 end
 
 group :test do
