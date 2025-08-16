@@ -1,7 +1,2 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-form .field_with_errors input {
-  @apply border-error;
-}
+@import "tailwindcss";
+@plugin "daisyui";
