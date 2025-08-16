@@ -11,7 +11,8 @@ updates:
     development-dependencies:
       dependency-type: "development"
     deployment-dependencies:
-      pattern: "^kamal$"
+      patterns:
+        - "kamal*"
 - package-ecosystem: github-actions
   directory: "/"
   schedule:

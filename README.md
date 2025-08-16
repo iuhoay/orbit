@@ -5,7 +5,7 @@ A Rails 8 starter template with modern tooling and user authentication.
 ## Quick Start
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/iuhoay/orbit.git
 cd orbit
 bin/setup
 ```
