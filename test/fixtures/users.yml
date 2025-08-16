@@ -1,6 +1,7 @@
 one:
   email: user_one@example.org
+  role: user
 
 admin:
   email: admin@example.org
-  role: :admin
+  role: admin

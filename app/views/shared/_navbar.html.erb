@@ -1,6 +1,6 @@
 <div class="navbar bg-neutral text-neutral-content">
   <div class="flex-1">
-    <%= content_for?(:nav_brand) ? yield(:nav_brand) : link_to("Home", root_path, class: "btn btn-ghost text-xl") %>
+    <%= content_for?(:nav_brand) ? yield(:nav_brand) : link_to("Home", root_path, class: "text-xl font-bold hover:text-primary transition-colors ml-4") %>
   </div>
   <div class="flex-none">
     <ul class="menu menu-horizontal px-1">
@@ -11,10 +11,6 @@
             <ul class="bg-neutral rounded-t-none p-2 z-50">
               <li><%= link_to "Edit Password", edit_password_path %></li>
               <li><%= button_to "Sign Out", session_path, method: :delete, class: "text-red-500" %></li>
-              <% if current_user.admin? %>
-                <li class="divide-y-8 divide-blue-200"></li>
-                <li><%= link_to "Admin", admin_root_path, class: "text-warning" %></li>
-              <% end %>
             </ul>
           </details>
         </li>

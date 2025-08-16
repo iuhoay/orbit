@@ -5,9 +5,9 @@
     <%= form_with model: @user, url: password_reset_path(token: params[:token]), class: "gap-2 flex flex-col" do |form| %>
       <%= form_errors_for(form) %>
 
-      <%= form.password_field :password, placeholder: "New Password", class: "input input-bordered w-full" %>
+      <%= form.password_field :password, placeholder: "New Password", class: "input w-full" %>
 
-      <%= form.password_field :password_confirmation, placeholder: "New Password Confirmation", class: "input input-bordered w-full" %>
+      <%= form.password_field :password_confirmation, placeholder: "New Password Confirmation", class: "input w-full" %>
 
       <%= form.submit "Reset Password", class: "btn btn-primary w-full" %>
     <% end %>

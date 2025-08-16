@@ -5,11 +5,11 @@
     <%= form_with model: @user, url: registration_path, class: "gap-2 flex flex-col" do |form| %>
       <%= form_errors_for(form) %>
 
-      <%= form.email_field :email, class: "input input-bordered w-full", placeholder: "Email" %>
+      <%= form.email_field :email, class: "input w-full", placeholder: "Email" %>
 
-      <%= form.password_field :password, class: "input input-bordered w-full", placeholder: "Password" %>
+      <%= form.password_field :password, class: "input w-full", placeholder: "Password" %>
 
-      <%= form.password_field :password_confirmation, class: "input input-bordered w-full", placeholder: "Password Confirmation" %>
+      <%= form.password_field :password_confirmation, class: "input w-full", placeholder: "Password Confirmation" %>
 
       <%= form.submit "Sign Up", class: "btn btn-primary w-full" %>
     <% end %>
