@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "dotenv", group: :development
 
-gem "rails", "~> 8.0.0"
+gem "rails", "~> 8.0.3"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
 # Use sqlite3 as the database for Active Record
