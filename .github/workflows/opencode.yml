@@ -15,7 +15,7 @@ jobs:
       startsWith(github.event.comment.body, '/opencode')
     runs-on: ubuntu-latest
     permissions:
-      id-token: write
+      # id-token: write
       contents: read
       pull-requests: read
       issues: read
