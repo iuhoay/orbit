@@ -27,6 +27,7 @@ jobs:
         uses: iuhoay/opencode/github@fix/duplicate-authorization-header
         env:
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           model: zai-coding-plan/glm-4.7
           use_github_token: true
